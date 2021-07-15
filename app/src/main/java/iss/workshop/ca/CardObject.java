@@ -3,8 +3,8 @@ package iss.workshop.ca;
 public class CardObject {
 
     // attributes
-    String url;
-    int id;
+    private String url;
+    private int id;
 
     // constructor
     public CardObject(String url, int id)

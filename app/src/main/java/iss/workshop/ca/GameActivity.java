@@ -11,6 +11,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemClock;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -204,7 +206,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(0).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card1);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -272,7 +277,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(1).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card2);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -340,7 +348,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(2).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card3);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -408,7 +419,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(3).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card4);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -476,7 +490,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(4).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card5);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -544,7 +561,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(5).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card6);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -612,7 +632,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(6).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card7);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -680,7 +703,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(7).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card8);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -748,7 +774,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(8).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card9);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -816,7 +845,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(9).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card10);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -884,7 +916,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(10).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card11);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -952,7 +987,10 @@ public class GameActivity extends AppCompatActivity {
                     {
                         String url = gameCards.get(11).getUrl();
                         Picasso.get().load(url).resize(300,300).into(card12);
+
                         Picasso.get().load(coverImage).resize(300,300).into(openedCard);
+                        Animation showCard = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animate_card);
+                        openedCard.startAnimation(showCard);
 
                         new Thread(new Runnable() {
                             @Override
@@ -993,6 +1031,11 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 
     public boolean matchCards(CardObject cardObj)
