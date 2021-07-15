@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/urlInput"
+            android:layout_width="240dp"
+            android:layout_height="43dp"
+            android:background="@color/white"
+            android:hint="@string/url_hint"
+            android:importantForAutofill="no"
+            android:inputType="textUri"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fetchBtn"
+            app:layout_constraintHorizontal_bias="0.228"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fetchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@color/grey"
+            android:text="@string/fetch"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/urlInput"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/photoGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/urlInput"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.23"
+            app:columnCount="4"
+            app:rowCount="5"
+            app:orientation="horizontal"
+            tools:context=".GridXMLActivity">
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image1"
+                app:layout_gravity="left|top" />
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image2"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image3"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image4"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image5"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image6"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image7"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image8"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image9"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image10"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image11"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image12"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image13"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image14"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image15"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image16"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image17"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image18"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image19"
+                app:layout_gravity="left|top"/>
+
+            <ImageView style="@style/imgStyle"
+                android:id="@+id/image20"
+                app:layout_gravity="left|top"/>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photoGrid"
+            app:layout_constraintVertical_bias="0.208"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/progressText"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            app:layout_constraintVertical_bias="0.2"/>
+
+        <TextView
+            android:id="@+id/selectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/startGameBtn"
+            app:layout_constraintHorizontal_bias="0.716"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photoGrid"
+            app:layout_constraintVertical_bias="0.458" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startGameBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/startGame"
+            android:textColor="@color/black"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photoGrid"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.885"
+            android:visibility="invisible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

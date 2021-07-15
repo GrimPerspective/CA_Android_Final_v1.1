@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CA</string>
+    <string name="url_hint">Enter URL here</string>
+    <string name="fetch">Fetch</string>
+    <string name="imgDL">Downloading image...</string>
+    <string name="startGame">Start</string>
+    <string name="gameComplete">Congratulations! All cards are matched!</string>
+    <string name="backToHome">Back to home</string>
+</resources>

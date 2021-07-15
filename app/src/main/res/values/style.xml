@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="imgStyle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:contentDescription">@string/imgDL</item>
+        <item name="android:foreground">@drawable/img_border</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:src">@drawable/empty</item>
+    </style>
+
+    <style name="card5">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:contentDescription">@string/imgDL</item>
+        <item name="android:foreground">@drawable/team5</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:src">@drawable/empty</item>
+    </style>
+</resources>

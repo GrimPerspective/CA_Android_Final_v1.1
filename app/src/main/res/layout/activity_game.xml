@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:scaleType="centerCrop"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="160dp"
+        android:layout_height="19dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/photoGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:orientation="horizontal"
+        app:rowCount="4"
+        tools:context=".GridXMLActivity">
+
+        <ImageView
+            android:id="@+id/card1"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card2"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card3"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card4"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card5"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card6"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card7"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card8"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card9"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card10"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card11"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/card12"
+            app:layout_gravity="left|top"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="113dp" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/numMatches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="655dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
