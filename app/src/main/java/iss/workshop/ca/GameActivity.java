@@ -32,6 +32,10 @@ public class GameActivity extends AppCompatActivity {
     Integer numMatches = 0;
     int elapsedMillis;
     int elapsedSeconds;
+    MediaPlayer bgSoundMP;
+    MediaPlayer correctSoundMP;
+    MediaPlayer wrongSoundMP;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +66,9 @@ public class GameActivity extends AppCompatActivity {
         CardObject cardObj6 = new CardObject(url6,6);
 
         //Implement Sounds
-        final MediaPlayer bgSoundMP = MediaPlayer.create(this, R.raw.bg);
-        final MediaPlayer correctSoundMP = MediaPlayer.create(this, R.raw.correct);
-        final MediaPlayer wrongSoundMP = MediaPlayer.create(this, R.raw.wrong);
+        bgSoundMP = MediaPlayer.create(this, R.raw.bg);
+        correctSoundMP = MediaPlayer.create(this, R.raw.correct);
+        wrongSoundMP = MediaPlayer.create(this, R.raw.wrong);
 
         //Implement Timer
         Chronometer timerChronometer;
@@ -103,8 +107,14 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        bgSoundMP.setLooping(true);
-        bgSoundMP.start();
+        if (bgSoundMP.isPlaying()){
+            bgSoundMP.stop();
+        }
+        else {
+            bgSoundMP.setLooping(true);
+            bgSoundMP.start();
+        }
+
         timerChronometer.setBase(SystemClock.elapsedRealtime());
         timerChronometer.start();
         timerChronometer.setFormat("Elapsed Time : %s");
@@ -1036,6 +1046,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        bgSoundMP.stop();
     }
 
     public boolean matchCards(CardObject cardObj)
