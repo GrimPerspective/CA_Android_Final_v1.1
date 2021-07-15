@@ -107,13 +107,10 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        if (bgSoundMP.isPlaying()){
-            bgSoundMP.stop();
-        }
-        else {
-            bgSoundMP.setLooping(true);
-            bgSoundMP.start();
-        }
+        //Start Sound
+        bgSoundMP.setLooping(true);
+        bgSoundMP.start();
+
 
         timerChronometer.setBase(SystemClock.elapsedRealtime());
         timerChronometer.start();
