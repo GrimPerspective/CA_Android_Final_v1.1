@@ -182,7 +182,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card1 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(0).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card1);
@@ -245,8 +250,12 @@ public class GameActivity extends AppCompatActivity {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (card2 == openedCard)
+                {
+                    return;
+                }
 
-                if (!checkCard)
+                else if (!checkCard)
                 {
                     String url = gameCards.get(1).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card2);
@@ -309,7 +318,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card3 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(2).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card3);
@@ -372,7 +386,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card4 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(3).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card4);
@@ -435,7 +454,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card5 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(4).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card5);
@@ -498,7 +522,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card6 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(5).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card6);
@@ -561,7 +590,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card7 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(6).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card7);
@@ -624,7 +658,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card8 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(7).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card8);
@@ -687,7 +726,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card9 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(8).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card9);
@@ -750,7 +794,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card10 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(9).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card10);
@@ -813,7 +862,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card11 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(10).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card11);
@@ -876,7 +930,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!checkCard)
+                if (card12 == openedCard)
+                {
+                    return;
+                }
+
+                else if (!checkCard)
                 {
                     String url = gameCards.get(11).getUrl();
                     Picasso.get().load(url).resize(300,300).into(card12);
