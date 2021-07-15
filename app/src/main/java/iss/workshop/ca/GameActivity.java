@@ -35,6 +35,7 @@ public class GameActivity extends AppCompatActivity {
     MediaPlayer bgSoundMP;
     MediaPlayer correctSoundMP;
     MediaPlayer wrongSoundMP;
+    Chronometer timerChronometer;
 
 
     @Override
@@ -48,22 +49,22 @@ public class GameActivity extends AppCompatActivity {
 
         // add URLs to each object
         String url1 = selectedImagesURL.get(0);
-        CardObject cardObj1 = new CardObject(url1, 1);
+        CardObject cardObj1 = new CardObject(url1, 1,false);
 
         String url2 = selectedImagesURL.get(1);
-        CardObject cardObj2 = new CardObject(url2,2);
+        CardObject cardObj2 = new CardObject(url2,2, false);
 
         String url3 = selectedImagesURL.get(2);
-        CardObject cardObj3 = new CardObject(url3,3);
+        CardObject cardObj3 = new CardObject(url3,3, false);
 
         String url4 = selectedImagesURL.get(3);
-        CardObject cardObj4 = new CardObject(url4,4);
+        CardObject cardObj4 = new CardObject(url4,4, false);
 
         String url5 = selectedImagesURL.get(4);
-        CardObject cardObj5 = new CardObject(url5,5);
+        CardObject cardObj5 = new CardObject(url5,5,false);
 
         String url6 = selectedImagesURL.get(5);
-        CardObject cardObj6 = new CardObject(url6,6);
+        CardObject cardObj6 = new CardObject(url6,6,false);
 
         //Implement Sounds
         bgSoundMP = MediaPlayer.create(this, R.raw.bg);
@@ -71,7 +72,6 @@ public class GameActivity extends AppCompatActivity {
         wrongSoundMP = MediaPlayer.create(this, R.raw.wrong);
 
         //Implement Timer
-        Chronometer timerChronometer;
         timerChronometer = (Chronometer)findViewById(R.id.chronometer);
         timerChronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener(){
             @Override
@@ -191,7 +191,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card1 == openedCard)
+                if (card1 == openedCard || gameCards.get(0).getMatched() == true)
                 {
                     return;
                 }
@@ -246,6 +246,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card1);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(0).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -262,7 +263,7 @@ public class GameActivity extends AppCompatActivity {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (card2 == openedCard)
+                if (card2 == openedCard || gameCards.get(1).getMatched() == true)
                 {
                     return;
                 }
@@ -316,6 +317,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card2);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(1).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -333,7 +335,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card3 == openedCard)
+                if (card3 == openedCard || gameCards.get(2).getMatched() == true)
                 {
                     return;
                 }
@@ -387,6 +389,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card3);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(2).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -404,7 +407,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card4 == openedCard)
+                if (card4 == openedCard || gameCards.get(3).getMatched() == true)
                 {
                     return;
                 }
@@ -458,6 +461,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card4);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(3).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -475,7 +479,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card5 == openedCard)
+                if (card5 == openedCard || gameCards.get(4).getMatched() == true)
                 {
                     return;
                 }
@@ -529,6 +533,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card5);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(4).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -546,7 +551,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card6 == openedCard)
+                if (card6 == openedCard || gameCards.get(5).getMatched() == true)
                 {
                     return;
                 }
@@ -600,6 +605,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card6);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(5).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -617,7 +623,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card7 == openedCard)
+                if (card7 == openedCard || gameCards.get(6).getMatched() == true)
                 {
                     return;
                 }
@@ -671,6 +677,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card7);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(6).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -688,7 +695,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card8 == openedCard)
+                if (card8 == openedCard || gameCards.get(7).getMatched() == true)
                 {
                     return;
                 }
@@ -742,6 +749,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card8);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(7).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -759,7 +767,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card9 == openedCard)
+                if (card9 == openedCard || gameCards.get(8).getMatched() == true)
                 {
                     return;
                 }
@@ -813,6 +821,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card9);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(8).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -830,7 +839,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card10 == openedCard)
+                if (card10 == openedCard || gameCards.get(9).getMatched() == true)
                 {
                     return;
                 }
@@ -884,6 +893,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card10);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(9).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -901,7 +911,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card11 == openedCard)
+                if (card11 == openedCard || gameCards.get(10).getMatched() == true)
                 {
                     return;
                 }
@@ -955,6 +965,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card11);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(10).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -972,7 +983,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (card12 == openedCard)
+                if (card12 == openedCard || gameCards.get(11).getMatched() == true)
                 {
                     return;
                 }
@@ -1026,6 +1037,7 @@ public class GameActivity extends AppCompatActivity {
                         Picasso.get().load(url).resize(300,300).into(card12);
                         numMatches++;
                         correctSoundMP.start();
+                        gameCards.get(11).setMatched(true);
                         matched.setText(numMatches.toString() + " of 6 matches");
                     }
 
@@ -1044,6 +1056,13 @@ public class GameActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         bgSoundMP.stop();
+        timerChronometer.stop();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        bgSoundMP.start();
     }
 
     public boolean matchCards(CardObject cardObj)

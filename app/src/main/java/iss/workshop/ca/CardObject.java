@@ -5,12 +5,14 @@ public class CardObject {
     // attributes
     private String url;
     private int id;
+    private boolean matched;
 
     // constructor
-    public CardObject(String url, int id)
+    public CardObject(String url, int id, boolean matched)
     {
         this.url = url;
         this.id = id;
+        this.matched = matched;
     }
 
     // getters
@@ -24,4 +26,9 @@ public class CardObject {
         return id;
     }
 
+    public boolean getMatched() {return matched;}
+
+    public void setMatched(boolean matched) {
+        this.matched = matched;
+    }
 }
